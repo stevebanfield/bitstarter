@@ -6,16 +6,18 @@ var fs = require('fs');
 var sourceName = "index.html";
 var size = 28;
 
-var contents = new Buffer(size);
+// var contents = new Buffer(size);
 
-contents = fs.readFileSync(sourceName);
+var contents = fs.readFileSync(sourceName, 'utf-8');
 
-// console.log(contents.toString('utf-8'));
+console.log(contents);
 
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(contents.toString('utf-8'));
+//  response.send(contents.toString('utf-8'));
+    response.send(contents);
+
 });
 
 console.log(contents.toString('utf-8'));
