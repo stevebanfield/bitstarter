@@ -8,7 +8,7 @@ var size = 30;
 
 var contents = new Buffer(size);
 
-contents = fs.readSync(sourceName, "utf-8");
+contents = fs.readFileSync(sourceName);
 
 console.log(contents.toString);
 
