@@ -2,15 +2,21 @@
 
 require('buffer');
 
+var express = require('express');
+
 var fs = require('fs');
 var sourceName = "index.html";
 var size = 30;
 
 var contents = new Buffer(size);
 
+var app = express.createServer(express.logger());
+
 contents = fs.readFileSync(sourceName);
 
 console.log(contents.toString('utf-8'));
+
+// response.send
 
 /* require('fs').readFileSync(sourceName).toString().split(/\r?\n/).forEach(function(line){
   console.log(line);
@@ -20,9 +26,7 @@ console.log(contents.toString('utf-8'));
 
 /* original web.js code
 
-var express = require('express');
 
-var app = express.createServer(express.logger());
 
 
 
