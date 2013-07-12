@@ -1,20 +1,22 @@
 // new code
-/*
+
 require('buffer');
 
-var contents = "null";
 var fs = require('fs');
+var sourceName = "./index.html";
+var size = 30;
+
+var contents = new Buffer(size);
 
 contents = fs.readSync(sourceName, "utf-8");
-*/
 
-var sourceName = "index.html";
+console.log(contents.toString);
 
-require('fs').readFileSync(sourceName).toString().split(/\r?\n/).forEach(function(line){
+/* require('fs').readFileSync(sourceName).toString().split(/\r?\n/).forEach(function(line){
   console.log(line);
 //    response.send(line);
 });
-
+*/
 
 /* original web.js code
 
