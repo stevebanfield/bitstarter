@@ -12,15 +12,19 @@ var contents = fs.readFileSync(sourceName, 'utf-8');
 
 console.log(contents);
 
-var app = express.createServer(express.logger());
+// var app = express.createServer(express.logger());
 
-app.get('/', function(request, response) {
-//  response.send(contents.toString('utf-8'));
-    response.send(contents);
+// app.get('/', function(request, response) {
+// //  response.send(contents.toString('utf-8'));
+//     response.send(contents);
 
-});
+// });
 
-console.log(contents.toString('utf-8'));
+// console.log(contents.toString('utf-8'));
+
+// var port = process.env.PORT || 5000;
+// app.listen(port);
+
 
 // response.send(contents.toString('utf-8'));
 
