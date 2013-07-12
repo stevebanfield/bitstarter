@@ -1,27 +1,11 @@
 {
   "name": "bitstarter",
   "version": "0.0.1",
-  "description": "stanford cs-184 test app",
-  "main": "web.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
-    "express": "2.5.x"
+    "express": "3.1.x"
   },
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stevebanfield/bitstarter"
-  },
-  "keywords": [
-    "node",
-    "heroku"
-  ],
-  "author": "Steve Banfield",
-  "license": "BSD",
-  "gitHead": "90fd58e343c29e54fc1d4e19036595500b2bdc21"
+  }
 }
