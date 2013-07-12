@@ -2,14 +2,15 @@
 /*
 require('buffer');
 
-var sourceName = "index.html";
 var contents = "null";
 var fs = require('fs');
 
 contents = fs.readSync(sourceName, "utf-8");
 */
 
-require('fs').readFileSync('file.txt').toString().split(/\r?\n/).forEach(function(line){
+var sourceName = "index.html";
+
+require('fs').readFileSync(sourceName).toString().split(/\r?\n/).forEach(function(line){
   console.log(line);
 })
 
