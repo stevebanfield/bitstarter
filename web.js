@@ -3,14 +3,14 @@
 require('buffer');
 
 var fs = require('fs');
-var sourceName = "./index.html";
+var sourceName = "index.html";
 var size = 30;
 
 var contents = new Buffer(size);
 
 contents = fs.readFileSync(sourceName);
 
-console.log(contents.toString);
+console.log(contents.toString('utf-8'));
 
 /* require('fs').readFileSync(sourceName).toString().split(/\r?\n/).forEach(function(line){
   console.log(line);
