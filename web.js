@@ -1,6 +1,6 @@
 // new code
 
-require('express');
+var express = require('express');
 
 var fs = require('fs');
 var sourceName = "index.html";
@@ -9,6 +9,15 @@ var size = 50;
 var contents = new Buffer(size);
 
 contents = fs.readFileSync(sourceName);
+
+// console.log(contents.toString('utf-8'));
+
+var app = express.createServer(express.logger());
+
+app.get('/', function(request, response) {
+  response.send(contents.toString('utf-8'));
+  console.log(contents.toString('utf-8'));
+});
 
 console.log(contents.toString('utf-8'));
 
