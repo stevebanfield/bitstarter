@@ -11,9 +11,9 @@ contents = fs.readSync(sourceName, "utf-8");
 var sourceName = "index.html";
 
 require('fs').readFileSync(sourceName).toString().split(/\r?\n/).forEach(function(line){
-//  console.log(line);
-    response.send(line);
-})
+  console.log(line);
+//    response.send(line);
+});
 
 
 /* original web.js code
