@@ -1,26 +1,26 @@
 // new code
 
 var express = require('express');
+var app = express();
 var fs = require('fs');
 var sourceName = 'index.html';
 var size = 50;
 
-var contents = new Buffer(size);
+var buffer = new Buffer(size);
 
-contents = fs.readFileSync(sourceName);
-console.log(contents.toString('utf-8'));
+buffer = fs.readFileSync(sourceName);
+// console.log(buffer.toString('utf-8'));
 
-// var app = express.createServer(express.logger());
+app.use(express.logger());
 
-// app.get('/', function(request, response) {
-//   response.send(contents.toString('utf-8'));
-// //    console.log(contents.toString('utf-8'));
-// });
+app.get('/', function(request, response) {
+  response.send(buffer.toString('utf-8'));
+});
 
-// var port = process.env.PORT || 5000;
-// app.listen(port, function() {
-//   console.log("Listening on " + port);
-// });
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
 
 
 
