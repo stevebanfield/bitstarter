@@ -14,5 +14,9 @@
   ".section1",
   ".section2",
   ".faq",
+<<<<<<< HEAD
   ".footer"
+=======
+  ".footer",
+>>>>>>> dce64ecdcf114eaac7bc65519b9dcafd1c96dabf
 ]
